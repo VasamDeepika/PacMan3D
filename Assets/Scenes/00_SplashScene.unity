@@ -779,8 +779,32 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
-      propertyPath: sounds.Array.data[0].volume
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.411
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.701
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f35773a6daacf348803467160e471e8, type: 3}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[1].audioLoop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[1].audioName
+      value: PlayerDeath
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102057, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
       propertyPath: m_RootOrder
