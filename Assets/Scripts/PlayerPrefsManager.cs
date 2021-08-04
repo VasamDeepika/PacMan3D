@@ -27,7 +27,25 @@ public class PlayerPrefsManager : MonoBehaviour
         return PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);
     }
 
-    public static void UnlockLevel(int level)
+
+    public static void SetDifficulty(float difficulty)
+    {
+        if(difficulty>=0f && difficulty<=1f)
+        {
+            PlayerPrefs.SetFloat(DIFFICULTY_KEY, difficulty);
+        }
+        else
+        {
+            Debug.LogError("The difficulty level is out of range");
+        }
+    }
+
+    public static float GetDifficulty()
+    {
+        return PlayerPrefs.GetFloat(DIFFICULTY_KEY);
+    }
+
+    /*public static void UnlockLevel(int level)
     {
         if (level <= SceneManager.sceneCountInBuildSettings-1)
         {
@@ -52,22 +70,5 @@ public class PlayerPrefsManager : MonoBehaviour
             Debug.LogError("This level is not in the build order");
             return false;
         }
-    }
-
-    public static void SetDifficulty(float difficulty)
-    {
-        if(difficulty>=0f && difficulty<=1f)
-        {
-            PlayerPrefs.SetFloat(DIFFICULTY_KEY, difficulty);
-        }
-        else
-        {
-            Debug.LogError("The difficulty level is out of range");
-        }
-    }
-
-    public static float GetDifficulty()
-    {
-        return PlayerPrefs.GetFloat(DIFFICULTY_KEY);
-    }
+    }*/
 }
