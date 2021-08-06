@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public int moveSpeed;
     public CharacterController characterController;
     Vector3 moveInput;
+
+    Animator anim;
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -22,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         {
             ScoreManager.instance.IncrementScore();
             other.gameObject.SetActive(false);
+            Pool.instance.AddCoin(other.gameObject);
+            Pool.instance.CoinSpawning();
         }
     }
 }

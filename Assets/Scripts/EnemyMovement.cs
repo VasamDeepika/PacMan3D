@@ -20,13 +20,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             //FindObjectOfType<AudioManager>().PlayAudio("PlayerDeath");
             StartCoroutine(ChangeAfter2Seconds());
         }
     }
-
     IEnumerator ChangeAfter2Seconds()
     {
         yield return new WaitForSeconds(3f);

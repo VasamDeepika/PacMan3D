@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -28,13 +29,16 @@ public class ScoreManager : MonoBehaviour
         highscore = (br.ReadInt32());
         fs.Close();
         br.Close();
-       // highScoreText.text = highscore.ToString();
         //highscore = PlayerPrefs.GetInt("highscore");
     }
     public void IncrementScore()
     {
         score++;
         ScoreText.text = score.ToString();
+        if(score>=5)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         if (score > highscore)
         {
             highscore = score;
