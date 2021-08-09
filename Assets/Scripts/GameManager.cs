@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public static bool gameIsPaused;
-    public bool isGameOver = false;
 
     private void Awake()
     {
@@ -19,11 +18,5 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameIsPaused = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

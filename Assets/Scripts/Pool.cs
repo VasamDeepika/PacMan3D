@@ -44,8 +44,7 @@ public class Pool : MonoBehaviour
             Createpool();
         }
         GameObject temp = coinPool.Pop();
-        int wallPos = LayerMask.LayerToName(6).Length;
-        if (temp.tag == "Coin" && temp.transform.position.magnitude!=wallPos)
+        if (temp.tag == "Coin")
         {
             //Debug.Log(LayerMask.LayerToName(6));
             temp.SetActive(true);

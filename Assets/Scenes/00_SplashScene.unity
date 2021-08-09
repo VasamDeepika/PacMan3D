@@ -780,10 +780,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
       propertyPath: sounds.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
       propertyPath: sounds.Array.data[1].pitch
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
@@ -792,6 +796,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
       propertyPath: sounds.Array.data[1].volume
+      value: 0.701
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[2].volume
       value: 0.701
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
@@ -805,6 +813,14 @@ PrefabInstance:
     - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
       propertyPath: sounds.Array.data[1].audioName
       value: PlayerDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cb59a190445ba974aa8ebe3a595e8861, type: 3}
+    - target: {fileID: 3034746190859102056, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
+      propertyPath: sounds.Array.data[2].audioName
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3034746190859102057, guid: f9d427b7b50330448b3051d169fc2c26, type: 3}
       propertyPath: m_RootOrder

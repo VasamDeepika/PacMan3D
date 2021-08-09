@@ -18,15 +18,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            moveInput.x = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-            moveInput.z = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-            characterController.Move(moveInput);
+        moveInput.x = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        moveInput.z = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        
+        characterController.Move(moveInput);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Coin")
         {
+            FindObjectOfType<AudioManager>().PlayAudio("Coin");
             ScoreManager.instance.IncrementScore();
             other.gameObject.SetActive(false);
             Pool.instance.AddCoin(other.gameObject);

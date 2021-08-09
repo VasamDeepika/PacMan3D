@@ -10,7 +10,7 @@ public class ScoreManagerFinal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highScoreText.text = ScoreManager.instance.highscore.ToString();
+        highScoreText.text = ScoreManager.instance.highscore1.ToString();
         scoreText.text = ScoreManager.instance.score.ToString();
     }
 }

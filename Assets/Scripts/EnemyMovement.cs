@@ -22,13 +22,13 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //FindObjectOfType<AudioManager>().PlayAudio("PlayerDeath");
+            FindObjectOfType<AudioManager>().PlayAudio("PlayerDeath");
             StartCoroutine(ChangeAfter2Seconds());
         }
     }
     IEnumerator ChangeAfter2Seconds()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("05_EndScene");
     }
 }
